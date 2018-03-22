@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>测试</title>
+    <script src="$.ajax.js"></script>
+</head>
+
+<body>
+    <div class="forecast"></div>
+    <script>
+        $.ajax({
+                method: 'get',
+                url: 'http://123.207.89.151/jrtt/forecast'
+            })
+            .then(res => document.querySelector('.forecast').innerHTML = JSON.stringify(res))
+
+        $.ajax({
+                method: 'get',
+                url: 'http://apis.juhe.cn/mobile/get',
+                data: {
+                    phone: '17323410000',
+                    key: 'fcbbb62f008c07cc7f8bae66c59be1f2'
+                }
+            })
+            .then(res => console.log(res))
+    </script>
+</body>
+
+</html>
