@@ -1,31 +1,31 @@
-// //将对象转换成字符串 demo
-// let objToStringdemo = obj => {
-//     let arr = new Array();
-//     for (let key in obj) {
-//         //根据属性的类型转换为字符串
-//         typeof key === 'String' ? arr.push(`${key}:"${obj[key]}"`) : arr.push(`"${key}":"${obj[key]}"`);
-//     }
-//     let str = '';
-//     for (let i = 0; i < arr.length; i++) {
-//         str += arr[i];
-//         if (i === arr.length - 1) {
-//             return `{${str}}`;
-//         }
-//         str += ',';
-//     }
-// }
+//将对象转换成字符串 demo
+let objToStringdemo = obj => {
+    let arr = new Array();
+    for (let key in obj) {
+        //根据属性的类型转换为字符串
+        typeof key === 'String' ? arr.push(`${key}:"${obj[key]}"`) : arr.push(`"${key}":"${obj[key]}"`);
+    }
+    let str = '';
+    for (let i = 0; i < arr.length; i++) {
+        str += arr[i];
+        if (i === arr.length - 1) {
+            return `{${str}}`;
+        }
+        str += ',';
+    }
+}
 
-// //将对象转换成字符串
-// let objToString = obj => {
-//     let str = '';
-//     for (let key in obj) {
-//         //根据属性的类型转换为字符串
-//         typeof key === 'String' ? str += `${key}:"${obj[key]}",` : str += (`"${key}":"${obj[key]}",`);
-//     }
-//     //去掉字符串最后的逗号
-//     str = str.substr(0, str.length - 1);
-//     return `{${str}}`;
-// }
+//将对象转换成字符串
+let objToString = obj => {
+    let str = '';
+    for (let key in obj) {
+        //根据属性的类型转换为字符串
+        typeof key === 'String' ? str += `${key}:"${obj[key]}",` : str += (`"${key}":"${obj[key]}",`);
+    }
+    //去掉字符串最后的逗号
+    str = str.substr(0, str.length - 1);
+    return `{${str}}`;
+}
 
 //把data正确地转换成查询字符串
 let dataURL = obj => {
