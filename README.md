@@ -6,7 +6,8 @@
 - promise
 - 封装$.ajax()
 - typeof
-
+- dataURL方法
+- 正则表达式
 ### 待改进
 
 自己写的objToString方法只能将一层的对象转换为字符串
